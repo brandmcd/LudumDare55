@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
+  m_Name: RexNoEvidence
+  m_EditorClassIdentifier: 
+  OptionalDialogueAssetName: 
+  PersonName: 
+  SkipToDialogueName: 
+  PlayerPrefName: 
+  DialogueSet:
+  - eeves, this is preposterous! Yes, I left the room to talk to Valorie.
+  - Not about an affair, but to confront her about ending it.
+  - 'We were discreet for a reason, and I would never risk exposing our past indiscretions
+    by committing such a brash act under everyone''s nose. '
+  - 'We were discreet for a reason, and I would never risk exposing our past indiscretions
+    by committing such a brash act under everyone''s nose. '
+  - You're not only wrong but you're endangering my reputation based on mere conjectures!
+  - If you truly believe it was me you would need more evidence.

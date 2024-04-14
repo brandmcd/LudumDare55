@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
-  m_Name: 1Intro
+  m_Name: Terra
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: Jeeves
+  PersonName: Ms. Terra Dactyl
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:
-  - 'Ladies and gentlemen, thank you for gathering at my request. '
-  - 'We have reached a critical juncture in our investigation of the theft of the
-    Star of the Empire. '
-  - Through diligent inquiry and keen observation, the time has come to reveal the
-    culprit among us.
+  - Accusing me, Jeeves?
+  - Yes, I saw Valorie sneak away, and yes, I argued with my brother because I despise
+    how he flaunts his wealth.
+  - It's dangerous and foolish! But steal from him? Never! My methods are in words,
+    not deeds.
+  - You've misunderstood my intentions entirely.

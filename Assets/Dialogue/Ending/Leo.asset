@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
-  m_Name: 1Intro
+  m_Name: Leo
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: Jeeves
+  PersonName: Mr. Leo Plerdon
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:
-  - 'Ladies and gentlemen, thank you for gathering at my request. '
-  - 'We have reached a critical juncture in our investigation of the theft of the
-    Star of the Empire. '
-  - Through diligent inquiry and keen observation, the time has come to reveal the
-    culprit among us.
+  - Jeeves, this is insane!
+  - 'Yes, I hid under the table during the blackout! I was terrified! But stealing? '
+  - I'm just a waiter, and I've complained about my wages, sure, but I'd never escalate
+    to theft.
+  - I've been struggling, but I'm not a criminal. Please, you have to believe me!

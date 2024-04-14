@@ -590,6 +590,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282490187 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8830523860143675613, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+  m_PrefabInstance: {fileID: 877594561}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &392973905
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,8 +741,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  intro: []
-  Leo: []
+  intro:
+  - {fileID: 11400000, guid: ac3c894ab198032468e334d9bf8cfd3b, type: 2}
+  Leo:
+  - {fileID: 11400000, guid: ae8afea31bffaa44b81110364dc89b6f, type: 2}
   MrDactyl: []
   RexNoEvidence: []
   Rex: []
@@ -2385,7 +2398,7 @@ MonoBehaviour:
   _nameText: {fileID: 877594568}
   _dialogueText: {fileID: 877594567}
   textBox: {fileID: 877594566}
-  nameBox: {fileID: 0}
+  nameBox: {fileID: 282490187}
   _choiceBox1: {fileID: 877594565}
   _choiceBox2: {fileID: 877594564}
   _choiceText1: {fileID: 877594563}

@@ -32,12 +32,15 @@ public class Ending : DialogueUser
         //disable the blackout cover
         blackoutCover.SetActive(false);
         selection.enabled = false;
+        dialogueManager.OnDialogueEnd += EndSpeaking;
         StartCoroutine(OpeningSequenceRoutine());
+
     }
 
     IEnumerator OpeningSequenceRoutine()
     {
         StartSpeaking();
+        yield return new WaitForSeconds(1);
         //wait until the text box is done
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         yield return new WaitForSeconds(1);
@@ -99,8 +102,14 @@ public class Ending : DialogueUser
     }
     void StartSpeaking()
     {
+        print("assets: " + assets.Length);
         //might need to add something here idk yet
         OnBeginDialogue();
+    }
+
+    void EndSpeaking()
+    {
+
     }
 
     public void SelectLeo()

@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
-  m_Name: 1Intro
+  m_Name: Val
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: Jeeves
+  PersonName: Valorie Raptor
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:
-  - 'Ladies and gentlemen, thank you for gathering at my request. '
-  - 'We have reached a critical juncture in our investigation of the theft of the
-    Star of the Empire. '
-  - Through diligent inquiry and keen observation, the time has come to reveal the
-    culprit among us.
+  - "You think you've figured it all out, don't you, Jeeves? Yes, I lied about being
+    with my fianc\xE9 during the blackout."
+  - 'I was meeting Mr. Rex, but not for what you think. It was to end our affair,
+    once and for all. '
+  - But steal the diamond? That's where you're wrong. I wouldn't jeopardize my future
+    like that!

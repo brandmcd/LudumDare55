@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
-  m_Name: 1Intro
+  m_Name: Rex
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: Jeeves
+  PersonName: Mr. Tyer Rex
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:
-  - 'Ladies and gentlemen, thank you for gathering at my request. '
-  - 'We have reached a critical juncture in our investigation of the theft of the
-    Star of the Empire. '
-  - Through diligent inquiry and keen observation, the time has come to reveal the
-    culprit among us.
+  - It appears the game is up.
+  - Yes, Jeeves, I took the diamond. My resentment towards Mr. Dactyl for abandoning
+    our partnership
+  - and flaunting that damn stone tonight of all nights, it was too much.
+  - As for my affair with Valorie, well, that was a mistake too, one I regret deeply.
+  - You've unraveled everything, but know this was never about greed, but pride.
