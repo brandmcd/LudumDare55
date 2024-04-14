@@ -4,45 +4,38 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class OpeningSequence : DialogueUser
+public class OpeningSequence2 : DialogueUser
 {
     [SerializeField] private string _name;
-    [SerializeField] private ScriptableObject[] preBlackout;
-    [SerializeField] private ScriptableObject[] inBlackout;
-    [SerializeField] private ScriptableObject[] postBlackout;
+    [SerializeField] private ScriptableObject[] dialogue;
     public GameObject blackoutCover;
     public AudioClip blackoutSound;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
+        //make sure the player can't move
+        player.GetComponent<Player>().SetMovement(false);
         name = _name;
-        assets = preBlackout;
+        assets = dialogue;
         base.Start();
         //disable the blackout cover
-        blackoutCover.SetActive(false);
+        blackoutCover.SetActive(true);
         StartCoroutine(OpeningSequenceRoutine());
     }
 
     IEnumerator OpeningSequenceRoutine()
     {
+        //fade out the black screen
+        for (float i = 1; i > 0; i -= Time.deltaTime)
+        {
+            blackoutCover.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, i);
+            yield return new WaitForSeconds(0.01f);
+        }
         StartSpeaking();
         //wait until the text box is done
-        yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
-        yield return new WaitForSeconds(1);
-        blackoutCover.SetActive(true);
-        AudioSource audioSource = GetComponent<AudioSource>();
-        yield return new WaitForSeconds(1);
-        audioSource.PlayOneShot(blackoutSound);
-        assets = inBlackout;
-        yield return new WaitForSeconds(1);
-        StartSpeaking();
-        yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
-        //remove blackout
-        blackoutCover.SetActive(false);
-        assets = postBlackout;
-        yield return new WaitForSeconds(1);
-        StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         yield return new WaitForSeconds(1);
         //fade in the black screen
@@ -51,7 +44,7 @@ public class OpeningSequence : DialogueUser
             blackoutCover.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, i);
             yield return new WaitForSeconds(0.01f);
         }
-        //load the fake main area
+        //load the real
     }
     void StartSpeaking()
     {
