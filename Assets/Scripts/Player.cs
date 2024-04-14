@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     private Vector2 velocity;
     private bool up, down, left, right, anyinput, invShow;
     public Canvas inventoryCanvas;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         GetInput();
         Movement();
     }
@@ -73,9 +75,15 @@ public class Player : MonoBehaviour
 
         // Apply the velocity to the Rigidbody
         if (anyinput)
-            rb.velocity = Vector2.Lerp(rb.velocity, velocity, 0.2f); 
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, velocity, 0.2f);
+            animator.SetBool("IsWalking", true);
+        }
         else
+        {
             rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, 0.2f);
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     public void SetMovement(bool canMove)
