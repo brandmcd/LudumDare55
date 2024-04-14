@@ -1111,7 +1111,7 @@ MonoBehaviour:
   _choiceBox2: {fileID: 877594564}
   _choiceText1: {fileID: 877594563}
   _choiceText2: {fileID: 877594562}
-  talking: {fileID: 0}
+  talking: {fileID: 8300000, guid: 4f150819bafa6ad498156b0cb27a04b4, type: 3}
 --- !u!4 &1502165653
 Transform:
   m_ObjectHideFlags: 0
