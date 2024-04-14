@@ -35,11 +35,13 @@ public class MainMenu : MonoBehaviour
         if (isStart)
         {
             first.SetActive(false);
+            diamond.SetActive(false);
             second.SetActive(true);
         }
         else
         {
             first.SetActive(true);
+            diamond.SetActive(true);
             second.SetActive(false);
         }
         isStart = !isStart;
@@ -48,6 +50,6 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(1);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainArea");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Opening");
     }
 }
