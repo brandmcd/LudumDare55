@@ -16,7 +16,7 @@ public class Ending : DialogueUser
     [SerializeField] private ScriptableObject[] Valorie;
     [SerializeField] private ScriptableObject[] GoodOutro;
     [SerializeField] private ScriptableObject[] BadOutro;
-    [SerializeField] private Canvas selection;
+    [SerializeField] private GameObject selection;
 
     string[] neededPrefs = { "val2", "rex2" };
     bool correct = false;
@@ -31,7 +31,7 @@ public class Ending : DialogueUser
         base.Start();
         //disable the blackout cover
         blackoutCover.SetActive(false);
-        selection.enabled = false;
+        selection.SetActive(false);
         dialogueManager.OnDialogueEnd += EndSpeaking;
         StartCoroutine(OpeningSequenceRoutine());
 
@@ -39,17 +39,19 @@ public class Ending : DialogueUser
 
     IEnumerator OpeningSequenceRoutine()
     {
+        yield return new WaitForEndOfFrame();
         StartSpeaking();
         yield return new WaitForSeconds(1);
         //wait until the text box is done
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         yield return new WaitForSeconds(1);
         //enable selection
-        selection.enabled = true;
+        selection.SetActive(true);
         //wait until a selection is made
         yield return new WaitUntil(() => selectedPerson != "");
         yield return new WaitForSeconds(0.5f);
-        selection.enabled = false;
+        selection.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
         //run that person's dialogue
         switch (selectedPerson)
         {
@@ -79,6 +81,7 @@ public class Ending : DialogueUser
                 assets = Valorie;
                 break;
         }
+        yield return new WaitForEndOfFrame();
         StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         if(correct)

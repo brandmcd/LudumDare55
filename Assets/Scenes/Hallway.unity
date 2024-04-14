@@ -783,7 +783,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Mr. Tyer Rex '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3387924238321923795, guid: ce5d5e8ed87749744b3db38455e4b81c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce5d5e8ed87749744b3db38455e4b81c, type: 3}
 --- !u!1 &1243957504
 GameObject:

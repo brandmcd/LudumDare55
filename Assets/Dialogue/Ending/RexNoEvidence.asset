@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: RexNoEvidence
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: 
+  PersonName: Mr. Tyer Rex
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:
-  - eeves, this is preposterous! Yes, I left the room to talk to Valorie.
+  - Jeeves, this is preposterous! Yes, I left the room to talk to Valorie.
   - Not about an affair, but to confront her about ending it.
   - 'We were discreet for a reason, and I would never risk exposing our past indiscretions
     by committing such a brash act under everyone''s nose. '

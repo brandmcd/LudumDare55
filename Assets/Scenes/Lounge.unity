@@ -911,7 +911,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Valorie Raptor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4289098860888474756, guid: c8de06cc4ff4ecd4e9deaf4c8d0d155c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c8de06cc4ff4ecd4e9deaf4c8d0d155c, type: 3}
 --- !u!1001 &1368897651
 PrefabInstance:

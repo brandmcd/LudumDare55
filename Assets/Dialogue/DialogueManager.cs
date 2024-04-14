@@ -294,6 +294,7 @@ public class DialogueManager : MonoBehaviour
     void SetAllObjectsToEnabled(bool value)
     {
         
+        print("setting all objects to enabled" + value);
             _nameText.enabled = value;
         nameBox.enabled = value;
             _dialogueText.enabled = value;
