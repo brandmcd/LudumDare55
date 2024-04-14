@@ -1004,6 +1004,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &536100129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8830523860143675613, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+  m_PrefabInstance: {fileID: 712173729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &547296037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,9 +1105,10 @@ MonoBehaviour:
   _nameText: {fileID: 1083116782}
   _dialogueText: {fileID: 233460798}
   textBox: {fileID: 1719194261}
-  _choiceBox1: {fileID: 1576725369}
+  nameBox: {fileID: 536100129}
+  _choiceBox1: {fileID: 1419261596}
   _choiceBox2: {fileID: 1235259678}
-  _choiceText1: {fileID: 1957318507}
+  _choiceText1: {fileID: 768750694}
   _choiceText2: {fileID: 2011489426}
   talking: {fileID: 0}
 --- !u!4 &668372269
@@ -1255,6 +1267,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+--- !u!114 &768750694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8278263756596942904, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+  m_PrefabInstance: {fileID: 712173729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &771641516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1576725369 stripped
+--- !u!114 &1419261596 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8278263757393362318, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
   m_PrefabInstance: {fileID: 712173729}
@@ -2127,17 +2150,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.62463, y: 0.81916606}
   m_EdgeRadius: 0
---- !u!114 &1957318507 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8278263756596942904, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
-  m_PrefabInstance: {fileID: 712173729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2011489426 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8278263756670550617, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
