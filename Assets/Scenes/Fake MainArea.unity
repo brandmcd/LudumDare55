@@ -1528,7 +1528,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  dialogue: []
+  dialogue:
+  - {fileID: 11400000, guid: da4ff51ba1d24d04cab61d7dc3ebdace, type: 2}
+  - {fileID: 11400000, guid: 7e02f7f106252a44682cf0817a108230, type: 2}
+  - {fileID: 11400000, guid: 6e13554e463abdb4e9d1298915f3d48f, type: 2}
+  - {fileID: 11400000, guid: 291b26429b38f904db8fa0e25724bd91, type: 2}
   blackoutCover: {fileID: 462925066}
   blackoutSound: {fileID: 8300000, guid: 33aed5fd37420114caafed6f104df876, type: 3}
 --- !u!4 &888486418
