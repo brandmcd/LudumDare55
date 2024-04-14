@@ -5,7 +5,8 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
 
-    public GameObject diamond;
+    public GameObject diamond, first, second;
+    public static bool isStart = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,22 @@ public class MainMenu : MonoBehaviour
         diamond.GetComponent<Animator>().enabled = true;
         diamond.GetComponent<AudioSource>().Play();
         StartCoroutine(LoadScene());
+    }
+
+    //function to swap current display
+    public void Swap()
+    {
+        if (isStart)
+        {
+            first.SetActive(false);
+            second.SetActive(true);
+        }
+        else
+        {
+            first.SetActive(true);
+            second.SetActive(false);
+        }
+        isStart = !isStart;
     }
 
     IEnumerator LoadScene()
