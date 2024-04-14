@@ -19,6 +19,8 @@ public class OpeningSequence : DialogueUser
         name = _name;
         assets = preBlackout;
         base.Start();
+        //disable the blackout cover
+        blackoutCover.SetActive(false);
         StartCoroutine(OpeningSequenceRoutine());
     }
 
