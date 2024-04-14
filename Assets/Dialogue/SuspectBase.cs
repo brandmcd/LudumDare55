@@ -39,7 +39,7 @@ public class SuspectBase : DialogueUser
     {
         if (Vector3.Distance(transform.position, player.transform.position) < 2f &&  prompt == null)
         {
-            prompt = Instantiate(promptPrefab, player.transform.position + new Vector3(-1, -1, 0), Quaternion.identity);
+            prompt = Instantiate(promptPrefab, player.transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
         }
         else if (Vector3.Distance(transform.position, player.transform.position) > 2f && prompt != null)
         {
