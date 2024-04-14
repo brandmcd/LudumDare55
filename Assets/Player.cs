@@ -40,9 +40,9 @@ public class Player : MonoBehaviour
             if (invShow)
                 inventoryCanvas.gameObject.SetActive(true);
             else
-            {
                 inventoryCanvas.gameObject.SetActive(false);
-            }
+            rb.constraints = invShow ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
+            canMove = !canMove;
         }
     }
 
