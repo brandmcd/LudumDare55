@@ -295,6 +295,7 @@ public class DialogueManager : MonoBehaviour
     {
         
             _nameText.enabled = value;
+        nameBox.enabled = value;
             _dialogueText.enabled = value;
             textBox.enabled = value;
         if(_choiceBox1 == null)
