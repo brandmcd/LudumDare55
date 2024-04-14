@@ -16,29 +16,34 @@ public class OpeningSequence : DialogueUser
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         name = _name;
         assets = preBlackout;
         base.Start();
         //disable the blackout cover
         blackoutCover.SetActive(false);
+        dialogueManager.OnDialogueEnd += EndSpeaking;
         StartCoroutine(OpeningSequenceRoutine());
     }
 
     IEnumerator OpeningSequenceRoutine()
     {
+        yield return new WaitForSeconds(1);
         StartSpeaking();
         //wait until the text box is done
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         yield return new WaitForSeconds(1);
         blackoutCover.SetActive(true);
-        AudioSource audioSource = GetComponent<AudioSource>();
+        AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
         yield return new WaitForSeconds(1);
-        audioSource.PlayOneShot(blackoutSound);
+        if (blackoutSound != null)
+        { audioSource.PlayOneShot(blackoutSound); }
         assets = inBlackout;
         yield return new WaitForSeconds(1);
         StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         //remove blackout
+        yield return new WaitForSeconds(1);
         blackoutCover.SetActive(false);
         assets = postBlackout;
         yield return new WaitForSeconds(1);
@@ -59,6 +64,10 @@ public class OpeningSequence : DialogueUser
         OnBeginDialogue();
     }
 
+    void EndSpeaking()
+    {
+        //why the fuck does this need to be here
+    }
 
    
 }

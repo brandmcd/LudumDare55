@@ -432,7 +432,7 @@ MonoBehaviour:
   _choiceBox2: {fileID: 31541955}
   _choiceText1: {fileID: 31541954}
   _choiceText2: {fileID: 31541953}
-  talking: {fileID: 0}
+  talking: {fileID: 8300000, guid: 4f150819bafa6ad498156b0cb27a04b4, type: 3}
 --- !u!4 &564196939
 Transform:
   m_ObjectHideFlags: 0

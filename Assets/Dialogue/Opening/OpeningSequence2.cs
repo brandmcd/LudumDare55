@@ -28,6 +28,7 @@ public class OpeningSequence2 : DialogueUser
 
     IEnumerator OpeningSequenceRoutine()
     {
+        yield return new WaitForSeconds(3);
         //fade out the black screen
         for (float i = 1; i > 0; i -= Time.deltaTime)
         {
