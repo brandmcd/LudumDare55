@@ -587,6 +587,10 @@ PrefabInstance:
       value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8278263757466400346, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a1536905b3927ea498d5e641c5dbbd9b, type: 2}
+    - target: {fileID: 8278263757466400346, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
       propertyPath: m_fontSizeMax
       value: 22.2
       objectReference: {fileID: 0}
@@ -599,7 +603,15 @@ PrefabInstance:
       value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8278263757466400346, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3842891371691686285, guid: a1536905b3927ea498d5e641c5dbbd9b, type: 2}
+    - target: {fileID: 8278263757466400346, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
       propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278263757466400346, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -579,8 +579,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dacbea0135f6e7a4a8ae90ac7ba820d0, type: 2}
+  m_sharedMaterial: {fileID: 4327512291723403745, guid: dacbea0135f6e7a4a8ae90ac7ba820d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -926,8 +926,8 @@ MonoBehaviour:
     where dialogue will go! This is where dialogue will go! This is where dialogue
     will go! This is where dialogue will go!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a1536905b3927ea498d5e641c5dbbd9b, type: 2}
+  m_sharedMaterial: {fileID: 3842891371691686285, guid: a1536905b3927ea498d5e641c5dbbd9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.5
+  m_fontSize: 26.95
   m_fontSizeBase: 77.94
   m_fontWeight: 400
   m_enableAutoSizing: 1
