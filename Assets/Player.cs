@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] private bool canMove = true;
     private Rigidbody2D rb;
     private Vector2 velocity;
-    private bool up, down, left, right, anyinput;
+    private bool up, down, left, right, anyinput, invShow;
+    public Canvas inventoryCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,17 @@ public class Player : MonoBehaviour
         left = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
         right = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
         anyinput = up || down || left || right;
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            invShow = !invShow;
+            if (invShow)
+                inventoryCanvas.gameObject.SetActive(true);
+            else
+            {
+                inventoryCanvas.gameObject.SetActive(false);
+            }
+        }
     }
 
     void Movement()
