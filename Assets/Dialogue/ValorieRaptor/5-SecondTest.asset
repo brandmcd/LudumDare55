@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9366b78efcba44d8d56910609012c6, type: 3}
+  m_Name: 5-SecondTest
+  m_EditorClassIdentifier: 
+  OptionalDialogueAssetName: 
+  PersonName: Valorie Raptor
+  SkipToDialogueName: 
+  PlayerPrefName: val2
+  DialogueSet:
+  - 'Ugh, fine I lied earlier. '
+  - "I left Mr. Dactyl\u2019s side ONCE to meet Mr. Rex, but I said I was going to
+    use the bathroom. "
+  - 'The lights went out before I could meet with him and when they came back on
+    everyone was in a panic over the diamond. '

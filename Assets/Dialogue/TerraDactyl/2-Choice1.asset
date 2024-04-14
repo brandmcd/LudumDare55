@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07af79ddaeb33234c91ad29d355f7f2b, type: 3}
+  m_Name: 2-Choice1
+  m_EditorClassIdentifier: 
+  PersonName: 'Ms. Terra Dactyl '
+  DialoguePrompt: This is why I refused to talk to him tonight! He never listens
+    to me!
+  Choice1: Leave
+  Choice2: Ask about the blackout
+  Choice1GotoDialogueName: leave
+  Choice2GotoDialogueName: blackout

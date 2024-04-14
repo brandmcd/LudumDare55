@@ -138,11 +138,23 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator ShowDialogueSet(DialogueAsset asset)
     {
+        //set the player pref to true
+        if (asset.PlayerPrefName != "")
+        {
+            PlayerPrefs.SetString(asset.PlayerPrefName, "true");
+            print("set player pref" + asset.PlayerPrefName);
+        }
         SetAllObjectsToEnabled(true);
         SetAllChoicesToEnabled(false);
         
         _nameText.text = " " + asset.PersonName + "...";
         string[] dialogueSet = asset.DialogueSet;
+        //if set is empty end the dialogue
+        if (dialogueSet.Length == 0)
+        {
+            EndDialogue();
+            yield break;
+        }
 
         while (currentDialogue < dialogueSet.Length)
         {

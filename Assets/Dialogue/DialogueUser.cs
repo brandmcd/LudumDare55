@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using TMPro;
 using UnityEngine;
 
 public abstract class DialogueUser : MonoBehaviour
@@ -15,6 +15,7 @@ public abstract class DialogueUser : MonoBehaviour
     {
         //hook up to the dialogue manager
         dialogueManager = FindObjectOfType<DialogueManager>();
+        
         //for each scriptable object check if PersonName is "", if it is set it to the name of this object
         foreach (ScriptableObject asset in assets)
         {
