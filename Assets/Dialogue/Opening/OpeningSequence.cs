@@ -72,7 +72,7 @@ public class OpeningSequence : DialogueUser
 
     void EndSpeaking()
     {
-        //why the fuck does this need to be here
+        //why the f*$@ does this need to be here
     }
 
    

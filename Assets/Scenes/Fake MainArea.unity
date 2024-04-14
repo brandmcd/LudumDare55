@@ -990,6 +990,7 @@ MonoBehaviour:
   _nameText: {fileID: 1083116782}
   _dialogueText: {fileID: 233460798}
   textBox: {fileID: 1719194261}
+  nameBox: {fileID: 1958363425}
   _choiceBox1: {fileID: 1576725369}
   _choiceBox2: {fileID: 1235259678}
   _choiceText1: {fileID: 1957318507}
@@ -1528,8 +1529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 
   dialogue: []
-  blackoutCover: {fileID: 0}
-  blackoutSound: {fileID: 0}
+  blackoutCover: {fileID: 462925066}
+  blackoutSound: {fileID: 8300000, guid: 33aed5fd37420114caafed6f104df876, type: 3}
 --- !u!4 &888486418
 Transform:
   m_ObjectHideFlags: 0
@@ -1997,6 +1998,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1958363425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8830523860143675613, guid: d7702cbc0942e2d4ab65dd8d027e56b4, type: 3}
+  m_PrefabInstance: {fileID: 712173729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2011489426 stripped
