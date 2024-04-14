@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class SuspectBase : DialogueUser
@@ -39,7 +40,12 @@ public class SuspectBase : DialogueUser
     {
         if (Vector3.Distance(transform.position, player.transform.position) < 2f &&  prompt == null)
         {
-            prompt = Instantiate(promptPrefab, player.transform.position + new Vector3(0, 1.5f, 0), Quaternion.identity);
+            //check if is speaking
+            if(dialogueManager.textBox.isActiveAndEnabled)
+            {
+                return;
+            }
+            prompt = Instantiate(promptPrefab, transform.position + new Vector3(0, 1f, 0), Quaternion.identity);
         }
         else if (Vector3.Distance(transform.position, player.transform.position) > 2f && prompt != null)
         {
@@ -92,6 +98,7 @@ public class SuspectBase : DialogueUser
 
     void EndSpeaking()
     {
+        print("End speaking");
         if (!hasSpoken)
         {
             hasSpoken = true;

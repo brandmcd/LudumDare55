@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Scene References")]
     [SerializeField] TextMeshProUGUI _nameText;
     [SerializeField] TextMeshProUGUI _dialogueText;
-    [SerializeField] Image _textBox;
+   public Image textBox;
     [SerializeField] Button _choiceBox1, _choiceBox2;
     [SerializeField] TextMeshProUGUI _choiceText1, _choiceText2;
     [SerializeField] AudioClip talking;
@@ -296,7 +296,7 @@ public class DialogueManager : MonoBehaviour
         
             _nameText.enabled = value;
             _dialogueText.enabled = value;
-            _textBox.enabled = value;
+            textBox.enabled = value;
         if(_choiceBox1 == null)
         {
             return;
