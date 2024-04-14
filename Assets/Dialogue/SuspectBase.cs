@@ -14,7 +14,7 @@ public class SuspectBase : DialogueUser
     [SerializeField] private GameObject promptPrefab;
     private GameObject prompt;
     public bool interactable = true;
-    private bool hasSpoken;
+    private bool hasSpoken = false;
     private bool isIdle;
     private GameObject player;
 
@@ -67,16 +67,14 @@ public class SuspectBase : DialogueUser
 
     void StartSpeaking()
     {
+        print("haslayerSpoken: " + hasSpoken);  
         if (!hasSpoken)
         {
-            if (CheckContradictions())
-            {
-                assets = initialTestimony.Concat(secondTestimony).ToArray();
-            }
-            else
-            {
-                assets = initialTestimony;
-            }
+            
+          assets = initialTestimony;
+            hasSpoken = true;
+            isIdle = true;
+            
         }
         else if (CheckContradictions())
         {
@@ -99,11 +97,7 @@ public class SuspectBase : DialogueUser
     void EndSpeaking()
     {
         print("End speaking");
-        if (!hasSpoken)
-        {
-            hasSpoken = true;
-            isIdle = true;
-        }
+        
         player.GetComponent<Player>().SetMovement(true);
         StartCoroutine(ResetInteractability());
     }
