@@ -30,6 +30,6 @@ public class ReplayScene : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         //load opening scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Opening");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }

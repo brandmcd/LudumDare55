@@ -492,6 +492,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3255247434926460370, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247434926460370, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247434926460370, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 720
+      objectReference: {fileID: 0}
     - target: {fileID: 3255247435991113949, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
