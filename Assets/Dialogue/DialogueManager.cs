@@ -161,8 +161,8 @@ public class DialogueManager : MonoBehaviour
             _dialogueText.text = "";
             string text = dialogueSet[currentDialogue];
             AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
-            if(talking != null)
-                    {
+            if(talking != null && audioSource != null)
+            {
 
                 audioSource.PlayOneShot(talking);
             }
@@ -211,7 +211,12 @@ public class DialogueManager : MonoBehaviour
 
         SetAllObjectsToEnabled(true);
         SetAllChoicesToEnabled(false);
-      
+        AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
+        if (talking != null && audioSource != null)
+        {
+
+            audioSource.PlayOneShot(talking);
+        }
 
 
         _nameText.text = " " + asset.PersonName + "...";
