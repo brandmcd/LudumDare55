@@ -15,7 +15,7 @@ MonoBehaviour:
   OptionalDialogueAssetName: 
   PersonName: 'Ms. Terra Dactyl '
   SkipToDialogueName: 
-  PlayerPrefName: 
+  PlayerPrefName: terra3
   DialogueSet:
   - So Leo saw that?
   - You got me, I did have an argument with my brother before the blackout.
