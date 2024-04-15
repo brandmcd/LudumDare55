@@ -72,34 +72,10 @@ public class TyerRex : DialogueUser
     {
         if (!hasSpoken)
         {
-            //4 possible states
-            //already spoken to both
-            if (PlayerPrefs.GetString(leoPref) == "true" && PlayerPrefs.GetString(valPref) == "true")
-            {
-                assets = initialTestimony.Concat(secondTestimonyLeoAndVal).ToArray();
-                //add the third testimony
-                assets = assets.Concat(thirdTestimony).ToArray();
-            }
-            else if (PlayerPrefs.GetString(leoPref) == "true")
-            {
-                assets = initialTestimony.Concat(secondTestimonyLeoSolo).ToArray();
-                //add the third testimony
-                assets = assets.Concat(thirdTestimony).ToArray();
-            }
-            else if (PlayerPrefs.GetString(valPref) == "true")
-            {
-                assets = initialTestimony.Concat(secondTestimonyValSolo).ToArray();
-                //add the third testimony
-                assets = assets.Concat(thirdTestimony).ToArray();
-            }
-            else
-            {
-                assets = initialTestimony;
-            }
+            assets = initialTestimony;
         }
         else
         {
-            //has done the first testimony
              if (PlayerPrefs.GetString(leoPref) == "true" && PlayerPrefs.GetString(valPref) == "true")
             {
                 assets = secondTestimonyLeoAndVal;
