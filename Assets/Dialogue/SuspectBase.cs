@@ -15,6 +15,7 @@ public class SuspectBase : DialogueUser
     private GameObject prompt;
     public bool interactable = true;
     private bool hasSpoken = false;
+    private bool hasRevealed = false;
     private bool isIdle;
     private GameObject player;
 
@@ -76,9 +77,10 @@ public class SuspectBase : DialogueUser
             isIdle = true;
             
         }
-        else if (CheckContradictions())
+        else if (CheckContradictions() && !hasRevealed)
         {
             assets = secondTestimony;
+            hasRevealed = true;
         }
         else if (isIdle)
         {

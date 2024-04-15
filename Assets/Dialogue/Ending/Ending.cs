@@ -30,7 +30,7 @@ public class Ending : DialogueUser
         assets = intro;
         base.Start();
         //disable the blackout cover
-        blackoutCover.SetActive(false);
+        blackoutCover.SetActive(true);
         selection.SetActive(false);
         dialogueManager.OnDialogueEnd += EndSpeaking;
         StartCoroutine(OpeningSequenceRoutine());
@@ -39,6 +39,13 @@ public class Ending : DialogueUser
 
     IEnumerator OpeningSequenceRoutine()
     {
+        //fade out the black screen
+        for (float i = 1; i > 0; i -= Time.deltaTime)
+        {
+            blackoutCover.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, i);
+            yield return new WaitForSeconds(0.01f);
+        }
+        blackoutCover.SetActive(false);
         yield return new WaitForEndOfFrame();
         StartSpeaking();
         yield return new WaitForSeconds(1);
@@ -81,6 +88,8 @@ public class Ending : DialogueUser
                 assets = Valorie;
                 break;
         }
+        //make a player pref for the ending
+        PlayerPrefs.SetString("ending", correct ? "good" : "bad");
         yield return new WaitForEndOfFrame();
         StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);

@@ -15,12 +15,10 @@ public class OpeningSequence2 : DialogueUser
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
-        //make sure the player can't move
-        player.GetComponent<Player>().SetMovement(false);
         name = _name;
         assets = dialogue;
         base.Start();
+        dialogueManager.OnDialogueEnd += EndSpeaking;
         //disable the blackout cover
         blackoutCover.SetActive(true);
         StartCoroutine(OpeningSequenceRoutine());
@@ -28,13 +26,14 @@ public class OpeningSequence2 : DialogueUser
 
     IEnumerator OpeningSequenceRoutine()
     {
-        yield return new WaitForSeconds(3);
+        
         //fade out the black screen
         for (float i = 1; i > 0; i -= Time.deltaTime)
         {
             blackoutCover.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, i);
             yield return new WaitForSeconds(0.01f);
         }
+        yield return new WaitForSeconds(1);
         StartSpeaking();
         //wait until the text box is done
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
@@ -46,6 +45,8 @@ public class OpeningSequence2 : DialogueUser
             yield return new WaitForSeconds(0.01f);
         }
         //load the real
+        //load the fake main area
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainArea");
     }
     void StartSpeaking()
     {
@@ -53,6 +54,9 @@ public class OpeningSequence2 : DialogueUser
         OnBeginDialogue();
     }
 
-
+    void EndSpeaking()
+    {
+        //this does NOTHING OMFG
+    }
    
 }

@@ -10,6 +10,7 @@ public class OpeningSequence : DialogueUser
     [SerializeField] private ScriptableObject[] preBlackout;
     [SerializeField] private ScriptableObject[] inBlackout;
     [SerializeField] private ScriptableObject[] postBlackout;
+    public AudioSource music;
     public GameObject blackoutCover;
     public AudioClip blackoutSound;
 
@@ -34,8 +35,10 @@ public class OpeningSequence : DialogueUser
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         yield return new WaitForSeconds(1);
         blackoutCover.SetActive(true);
+        //pause the music
+        music.Pause();
         AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         if (blackoutSound != null)
         { audioSource.PlayOneShot(blackoutSound); }
         assets = inBlackout;
@@ -44,19 +47,22 @@ public class OpeningSequence : DialogueUser
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
         //remove blackout
         yield return new WaitForSeconds(1);
+        music.UnPause();
         blackoutCover.SetActive(false);
         assets = postBlackout;
         yield return new WaitForSeconds(1);
         StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
-        yield return new WaitForSeconds(1);
         //fade in the black screen
+
         for (float i = 0; i < 1; i += Time.deltaTime)
         {
             blackoutCover.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, i);
+            blackoutCover.SetActive(true);
             yield return new WaitForSeconds(0.01f);
         }
         //load the fake main area
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Fake MainArea");
     }
     void StartSpeaking()
     {
@@ -66,7 +72,7 @@ public class OpeningSequence : DialogueUser
 
     void EndSpeaking()
     {
-        //why the fuck does this need to be here
+        //why the f*$@ does this need to be here
     }
 
    
