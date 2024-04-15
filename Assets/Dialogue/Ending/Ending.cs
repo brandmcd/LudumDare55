@@ -111,6 +111,8 @@ public class Ending : DialogueUser
             yield return new WaitForSeconds(0.01f);
         }
         //load the fake main area
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("OfferReplay");
     }
     void StartSpeaking()
     {
