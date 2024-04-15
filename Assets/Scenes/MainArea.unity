@@ -1370,6 +1370,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864649, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 865.1207
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864649, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 108.0362
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864649, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.9019
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864649, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864651, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_text
+      value: There is no use for that item here
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864651, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864651, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864651, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255247435165864652, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3255247435991113949, guid: d8a344aba0c44bf4fb0f14ba2174a111, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -1598,6 +1634,10 @@ PrefabInstance:
     - target: {fileID: 4026168067717077206, guid: 5d32361584b120f4fb88e69c436f84dc, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026168067717077206, guid: 5d32361584b120f4fb88e69c436f84dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4026168068177460875, guid: 5d32361584b120f4fb88e69c436f84dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
