@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3-Leave
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: leave
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet: []

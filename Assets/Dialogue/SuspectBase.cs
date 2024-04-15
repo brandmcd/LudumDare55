@@ -22,6 +22,29 @@ public class SuspectBase : DialogueUser
     // Start is called before the first frame update
     void Start()
     {
+        string thing = PlayerPrefs.GetString(gameObject.name + "hasSpoken", "false");
+        string thing2 = PlayerPrefs.GetString(gameObject.name + "hasRevealed", "false");
+        //set hasSpoken to true if the player has spoken to this suspect before
+        if (thing == "true")
+        {
+            hasSpoken = true;
+            isIdle = true;
+        }
+        else
+        {
+            isIdle = false;
+            hasSpoken = false;
+        }
+
+        //set hasRevealed to true if the player has revealed the contradiction to this suspect before
+        if (thing2 == "true")
+        {
+            hasRevealed = true;
+        }
+        else
+        {
+            hasRevealed = false;
+        }
         player = GameObject.Find("Player");
         name = _name;
         assets = initialTestimony;
@@ -73,6 +96,7 @@ public class SuspectBase : DialogueUser
         {
             
           assets = initialTestimony;
+            PlayerPrefs.SetString(gameObject.name + "hasSpoken", "true");
             hasSpoken = true;
             isIdle = true;
             
@@ -80,7 +104,7 @@ public class SuspectBase : DialogueUser
         else if (CheckContradictions() && !hasRevealed)
         {
             assets = secondTestimony;
-            hasRevealed = true;
+            PlayerPrefs.SetString(gameObject.name + "hasRevealed", "true");
         }
         else if (isIdle)
         {

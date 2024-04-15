@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07af79ddaeb33234c91ad29d355f7f2b, type: 3}
   m_Name: 2-Choice1
   m_EditorClassIdentifier: 
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   DialoguePrompt: Mr. Dactyl worked so very hard for it.
   Choice1: Leave
   Choice2: Ask about blackout

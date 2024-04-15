@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 8-MoreDialogue
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: asking
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   SkipToDialogueName: 
   PlayerPrefName: rex2
   DialogueSet:

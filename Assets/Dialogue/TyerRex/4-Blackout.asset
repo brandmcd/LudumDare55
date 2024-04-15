@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 4-Blackout
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: blackout
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   SkipToDialogueName: 
   PlayerPrefName: rex1
   DialogueSet:

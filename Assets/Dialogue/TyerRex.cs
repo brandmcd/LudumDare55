@@ -18,12 +18,36 @@ public class TyerRex : DialogueUser
     private GameObject prompt;
     public bool interactable = true;
     private bool hasSpoken;
+    private bool hasRevealed;
     private bool isIdle;
     private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
+        string thing = PlayerPrefs.GetString(gameObject.name + "hasSpoken", "false");
+        string thing2 = PlayerPrefs.GetString(gameObject.name + "hasRevealed", "false");
+        //set hasSpoken to true if the player has spoken to this suspect before
+        if (thing == "true")
+        {
+            hasSpoken = true;
+            isIdle = true;
+        }
+        else
+        {
+            isIdle = false;
+            hasSpoken = false;
+        }
+
+        //set hasRevealed to true if the player has revealed the contradiction to this suspect before
+        if (thing2 == "true")
+        {
+            hasRevealed = true;
+        }
+        else
+        {
+            hasRevealed = false;
+        }
         player = GameObject.Find("Player");
         name = _name;
         assets = initialTestimony;
@@ -76,6 +100,7 @@ public class TyerRex : DialogueUser
         }
         else
         {
+            
              if (PlayerPrefs.GetString(leoPref) == "true" && PlayerPrefs.GetString(valPref) == "true")
             {
                 assets = secondTestimonyLeoAndVal;
@@ -98,6 +123,8 @@ public class TyerRex : DialogueUser
             {
                 assets = idle;
             }
+            hasRevealed = true;
+            PlayerPrefs.SetString(gameObject.name + "hasRevealed", "true");
         }
 
         print("assets: " + assets.Length);
@@ -110,6 +137,7 @@ public class TyerRex : DialogueUser
     {
         if (!hasSpoken)
         {
+            PlayerPrefs.SetString(gameObject.name + "hasSpoken", "true");
             hasSpoken = true;
             isIdle = true;
         }

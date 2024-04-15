@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 0-idle
   m_EditorClassIdentifier: 
   OptionalDialogueAssetName: 
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   SkipToDialogueName: 
   PlayerPrefName: 
   DialogueSet:

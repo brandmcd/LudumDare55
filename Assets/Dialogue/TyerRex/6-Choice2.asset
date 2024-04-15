@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07af79ddaeb33234c91ad29d355f7f2b, type: 3}
   m_Name: 6-Choice2
   m_EditorClassIdentifier: 
-  PersonName: 
+  PersonName: 'Mr. Tyer Rex '
   DialoguePrompt: So, are you going to grill me further on this misunderstanding,
     or shall we drop it?
   Choice1: Leave
