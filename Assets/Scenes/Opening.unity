@@ -264,6 +264,7 @@ MonoBehaviour:
   inBlackout:
   - {fileID: 11400000, guid: 8f2c7976991ffc04ba7c884d6adb77c7, type: 2}
   postBlackout:
+  - {fileID: 11400000, guid: 6f16cbe0ca25b54419df8ce9cc735fac, type: 2}
   - {fileID: 11400000, guid: a1d6960badcb44f4ab7a757848829242, type: 2}
   - {fileID: 11400000, guid: 816f1695da806fd4a995cc71dba10fea, type: 2}
   music: {fileID: 1978446997}

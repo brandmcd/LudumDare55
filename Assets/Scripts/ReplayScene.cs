@@ -28,6 +28,7 @@ public class ReplayScene : MonoBehaviour
 
    public void Replay()
     {
+        PlayerPrefs.DeleteAll();
         //load opening scene
         UnityEngine.SceneManagement.SceneManager.LoadScene("Opening");
     }
