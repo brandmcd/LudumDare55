@@ -25,7 +25,6 @@ public class InventoryManager : MonoBehaviour
     {
         noUseTxt.GetComponent<TextMeshProUGUI>().text = "";
         noUseTxt.SetActive(true);
-        // Get the item name from the button
         string itemName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
         if(itemName == "VR_Testimony")
