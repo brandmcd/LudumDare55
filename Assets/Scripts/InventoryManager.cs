@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
             if (PlayerPrefs.GetString("terra1") == "true")
             {
                 noUseTxt.GetComponent<TextMeshProUGUI>().text = summaries[2];
-                if (PlayerPrefs.GetString("terra2") == "true")
+                if (PlayerPrefs.GetString("terra3") == "true")
                     noUseTxt.GetComponent<TextMeshProUGUI>().text = summaries[3];
             }
             else
