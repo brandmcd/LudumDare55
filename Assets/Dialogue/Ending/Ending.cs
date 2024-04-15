@@ -88,6 +88,8 @@ public class Ending : DialogueUser
                 assets = Valorie;
                 break;
         }
+        //make a player pref for the ending
+        PlayerPrefs.SetString("ending", correct ? "good" : "bad");
         yield return new WaitForEndOfFrame();
         StartSpeaking();
         yield return new WaitUntil(() => !dialogueManager.textBox.isActiveAndEnabled);
