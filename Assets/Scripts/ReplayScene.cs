@@ -28,6 +28,11 @@ public class ReplayScene : MonoBehaviour
 
    public void Replay()
     {
+        GameObject obj = GameObject.Find("Murder Mystery level theme");
+        if (obj != null)
+        {
+            Destroy(obj);
+        }
         PlayerPrefs.DeleteAll();
         //load opening scene
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
