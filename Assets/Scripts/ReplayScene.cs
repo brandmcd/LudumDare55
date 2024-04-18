@@ -31,7 +31,7 @@ public class ReplayScene : MonoBehaviour
         GameObject obj = GameObject.Find("Murder Mystery level theme");
         if (obj != null)
         {
-            Destroy(obj);
+            Destroy(obj);   
         }
         PlayerPrefs.DeleteAll();
         //load opening scene
